@@ -27,6 +27,5 @@ public class Main {
         flute.play();
         drum.play();
         violin.play();
-        System.out.println(WindInstruments.name);
     }
 }
