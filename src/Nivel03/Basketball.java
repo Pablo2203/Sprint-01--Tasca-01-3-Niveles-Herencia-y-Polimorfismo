@@ -12,34 +12,34 @@ public class Basketball extends News {
     @Override
     public double calculateNewsPrice(){
         double initialPrice = 250;
-        double euroLiga= 75;
-        double barçaMadrid = 75;
+        double euroLigaSuplementPrice= 75;
+        double barçaMadridSuplementPrice = 75;
         double finalPrice = initialPrice;
 
         if (this.competition.equalsIgnoreCase("Euroliga")) {
-            finalPrice += euroLiga;
+            finalPrice += euroLigaSuplementPrice;
         }
         if (this.club.equalsIgnoreCase("Barcelona") || this.club.equalsIgnoreCase("Madrid")) {
-            finalPrice += barçaMadrid;
+            finalPrice += barçaMadridSuplementPrice;
         }
         return finalPrice;
     }
     @Override
     public int calculateRating(){
         int initialRating = 4;
-        int euroLiga = 3;
-        int acb = 2;
-        int barçaMadrid = 1;
+        int euroLigaRatingBonus = 3;
+        int acbRatingBonus = 2;
+        int barçaMadridRatingBonus = 1;
         int finalRating = initialRating;
 
         if(this.competition.equalsIgnoreCase("Euroliga")){
-            finalRating += euroLiga;
+            finalRating += euroLigaRatingBonus;
         }
         if(this.competition.equalsIgnoreCase("ACB")){
-            finalRating += acb;
+            finalRating += acbRatingBonus;
         }
         if(this.club.equalsIgnoreCase("Barcelona") || this.club.equalsIgnoreCase("Madrid")){
-            finalRating += barçaMadrid;
+            finalRating += barçaMadridRatingBonus;
         }
         return finalRating;
     }

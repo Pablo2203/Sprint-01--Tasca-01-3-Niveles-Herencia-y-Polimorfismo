@@ -10,10 +10,10 @@ public class Motorcycle extends News{
     @Override
     public double calculateNewsPrice(){
         double initialPrice = 100;
-        double hondaYamaha = 50;
+        double hondaYamahaSuplementPrice = 50;
         double finalPrice = initialPrice;
         if (this.team.equalsIgnoreCase("Honda") || this.team.equalsIgnoreCase("Yamaha")) {
-            finalPrice += hondaYamaha;
+            finalPrice += hondaYamahaSuplementPrice;
         }
         return finalPrice;
     }
@@ -21,10 +21,10 @@ public class Motorcycle extends News{
     @Override
     public int calculateRating(){
         int initialRating = 4;
-        int hondaYamaha = 3;
+        int hondaYamahaBonusRating = 3;
         int finalRating = initialRating;
         if (this.team.equalsIgnoreCase("Honda") || this.team.equalsIgnoreCase("Yamaha")) {
-            finalRating += hondaYamaha;
+            finalRating += hondaYamahaBonusRating;
         }
         return finalRating;
     }

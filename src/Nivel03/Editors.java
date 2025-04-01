@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class Editors {
     private String name;
-    final String dni;
-    static double salary;
+    private final String dni;
+    private static double salary;
     private ArrayList<News> newsList;
 
     public Editors(String name, String dni) {

@@ -12,21 +12,21 @@ public class Tennis extends News {
     @Override
     public double calculateNewsPrice() {
         double initialPrice = 150;
-        double federerNadalDjokovic = 100;
+        double federerNadalDjokovicSuplementPrice = 100;
         double finalPrice = initialPrice;
 
         if (this.player.equalsIgnoreCase("Federer") || this.player.equalsIgnoreCase("Nadal") || this.player.equalsIgnoreCase("Djokovic")) {
-            finalPrice += federerNadalDjokovic;
+            finalPrice += federerNadalDjokovicSuplementPrice;
         }
         return finalPrice;
     }
     @Override
     public int calculateRating() {
         int initialRating = 4;
-        int federerNadalDjokovic = 3;
+        int federerNadalDjokovicBonusRating = 3;
         int finalRating = initialRating;
         if (this.player.equalsIgnoreCase("Federer") || this.player.equalsIgnoreCase("Nadal") || this.player.equalsIgnoreCase("Djokovic")) {
-            finalRating += federerNadalDjokovic;
+            finalRating += federerNadalDjokovicBonusRating;
         }
         return finalRating;
     }

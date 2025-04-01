@@ -12,21 +12,21 @@ public class F1 extends News {
     @Override
     public double calculateNewsPrice(){
         double initialPrice = 100;
-        double ferrariMercedes = 50;
+        double ferrariMercedesSuplementPrice = 50;
         double finalPrice = initialPrice;
 
         if (this.race.equalsIgnoreCase("Ferrari") || this.race.equalsIgnoreCase("Mercedes")) {
-            finalPrice += ferrariMercedes;
+            finalPrice += ferrariMercedesSuplementPrice;
         }
         return finalPrice;
     }
     @Override
     public int calculateRating(){
         int initialRating = 4;
-        int ferrariMercedes = 3;
+        int ferrariMercedesRatingBonus = 3;
         int finalRating = initialRating;
         if (this.race.equalsIgnoreCase("Ferrari") || this.race.equalsIgnoreCase("Mercedes")) {
-            finalRating += ferrariMercedes;
+            finalRating += ferrariMercedesRatingBonus;
         }
         return finalRating;
     }

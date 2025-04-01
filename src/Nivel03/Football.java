@@ -14,19 +14,19 @@ public class Football extends News{
     @Override
     public double calculateNewsPrice() {
         double initialPrice = 300;
-        double champions = 100;
-        double barçaMadrid = 100;
-        double ferranTorresOBenzema = 50;
+        double championsSuplementPrice = 100;
+        double barçaMadridSuplementPrice = 100;
+        double ferranTorresOBenzemaSuplementPrice = 50;
         double finalPrice = initialPrice;
 
         if (this.competition.equalsIgnoreCase("Liga de Campeones")) {
-            finalPrice += champions;
+            finalPrice += championsSuplementPrice;
         }
         if (this.club.equalsIgnoreCase("Barcelona") || this.club.equalsIgnoreCase("Madrid")) {
-            finalPrice += barçaMadrid;
+            finalPrice += barçaMadridSuplementPrice;
         }
         if (this.player.equalsIgnoreCase("Benzema") || this.player.equalsIgnoreCase("Ferran Torres")) {
-            finalPrice += ferranTorresOBenzema;
+            finalPrice += ferranTorresOBenzemaSuplementPrice;
         }
         return finalPrice;
     }
@@ -34,23 +34,23 @@ public class Football extends News{
     @Override
     public int calculateRating() {
         int initialRating = 5;
-        int ligaDeCampeones = 3;
-        int liga = 2;
-        int barçaMadrid = 1;
-        int ferranTorresOBenzema = 1;
+        int ligaDeCampeonesRatingBonus = 3;
+        int ligaRatingBonus = 2;
+        int barçaMadridRatingBonus = 1;
+        int ferranTorresOBenzemaRatingBonus = 1;
         int finalRating = initialRating;
 
         if (this.competition.equalsIgnoreCase("Liga de Campeones")) {
-            finalRating += ligaDeCampeones;
+            finalRating += ligaDeCampeonesRatingBonus;
         }
         if (this.competition.equalsIgnoreCase("Liga")) {
-            finalRating += liga;
+            finalRating += ligaRatingBonus;
         }
         if (this.club.equalsIgnoreCase("Barcelona") || this.club.equalsIgnoreCase("Madrid")) {
-            finalRating += barçaMadrid;
+            finalRating += barçaMadridRatingBonus;
         }
         if (this.player.equalsIgnoreCase("Benzema") || this.player.equalsIgnoreCase("Ferran Torres")) {
-            finalRating += ferranTorresOBenzema;
+            finalRating += ferranTorresOBenzemaRatingBonus;
         }
 
         return finalRating;
